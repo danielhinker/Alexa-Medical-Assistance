@@ -111,6 +111,7 @@ def set_patient_in_session(intent, session):
     return build_response(session_attributes, build_speechlet_response(
         card_title, speech_output, reprompt_text, should_end_session))
 
+
 def get_patient_from_session(intent, session):
     session_attributes = True
     reprompt_text = None
@@ -147,6 +148,43 @@ def create_patient_name_attributes(patient_name):
 
 # --------------- Basic Info --------------- #
 
+def set_race_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = patient_name + " is a " + patient_race + " " + patient_gender + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+
 def get_race_from_session(intent, session):
     session_attributes = True
     reprompt_text = None
@@ -175,6 +213,44 @@ def get_race_from_session(intent, session):
 
 # --------------- Basic Info --------------- #
 
+def set_height_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        patient_height = "5 foot 10"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = patient_name + " is " + patient_height + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+
 def get_height_from_session(intent, session):
     session_attributes = {}
     reprompt_text = None
@@ -199,6 +275,43 @@ def get_height_from_session(intent, session):
         card_title, speech_output, reprompt_text, should_end_session))
 
 # --------------- Basic Info --------------- #
+def set_weight_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        patient_height = "5 foot 10"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = patient_name + " is " + patient_weight + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 
 def get_weight_from_session(intent, session):
     session_attributes = {}
@@ -223,6 +336,43 @@ def get_weight_from_session(intent, session):
         card_title, speech_output, reprompt_text, should_end_session))
 
 # --------------- Basic Info --------------- #
+def set_age_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        patient_height = "5 foot 10"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = patient_name + " is " + patient_age  + "years old" + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 
 def get_age_from_session(intent, session):
     session_attributes = {}
@@ -248,6 +398,43 @@ def get_age_from_session(intent, session):
 
 
 # --------------- Basic Info --------------- #
+def set_bmi_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        patient_height = "5 foot 10"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = "the bmi of " + patient_name + " is " + patient_bmi  + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 
 def get_bmi_from_session(intent, session):
     session_attributes = {}
@@ -274,6 +461,43 @@ def get_bmi_from_session(intent, session):
 
 
 # --------------- Basic Info --------------- #
+def set_temp_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        patient_height = "5 foot 10"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = "the temperature of " + patient_name + " is " + patient_temp  + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 
 def get_temp_from_session(intent, session):
     session_attributes = {}
@@ -299,6 +523,43 @@ def get_temp_from_session(intent, session):
 
 
 # --------------- Basic Info --------------- #
+def set_vitals_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        patient_height = "5 foot 10"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = patient_name + " is stable with a resting heart rate of 75 beats per minute and 15 breats per minute " + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 
 def get_vitals_from_session(intent, session):
     session_attributes = true
@@ -325,6 +586,43 @@ def get_vitals_from_session(intent, session):
 
 
 # --------------- Basic Info --------------- #
+def set_resp_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        patient_height = "5 foot 10"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = "the respiratory rate of " + patient_name + "is" + patient_respiratory + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 
 def get_resp_from_session(intent, session):
     session_attributes = {}
@@ -351,6 +649,43 @@ def get_resp_from_session(intent, session):
 
 
 # --------------- Basic Info --------------- #
+def set_os_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        patient_height = "5 foot 10"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = "the oxygen saturation of " + patient_name + "is" + patient_os + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 
 def get_os_from_session(intent, session):
     session_attributes = {}
@@ -377,6 +712,43 @@ def get_os_from_session(intent, session):
 
 
 # --------------- Basic Info --------------- #
+def set_lab_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        patient_height = "5 foot 10"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = "the CT Scan of " + patient_name + "is showing subdural hematoma" + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 
 def get_lab_from_session(intent, session):
     session_attributes = {}
@@ -403,6 +775,44 @@ def get_lab_from_session(intent, session):
 
 
 # --------------- Basic Info --------------- #
+def set_note_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        patient_height = "5 foot 10"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = "the attending nurse noted that, " + patient_name + "was stable" + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+
 
 def get_notes_from_session(intent, session):
     session_attributes = {}
@@ -430,6 +840,43 @@ def get_notes_from_session(intent, session):
 
 
 # --------------- Basic Info --------------- #
+def set_bp_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        patient_height = "5 foot 10"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = "the blood pressure of " + patient_name + "is" + patient_bp + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 
 def get_bp_from_session(intent, session):
     session_attributes = {create_patient_name_attributes(patient_name)}
@@ -456,6 +903,43 @@ def get_bp_from_session(intent, session):
 
 
 # --------------- Basic Info --------------- #
+def set_procedure_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+
+    card_title = intent['name']
+    session_attributes = True
+    should_end_session = False
+
+    if 'Name' in intent['slots']:
+        patient_name = intent['slots']['Name']['value']
+        session_attributes = create_patient_name_attributes(patient_name)
+        patient_race = "White"
+        patient_gender = "Male"
+        patient_age = "20"
+        patient_bp = "120 over 80"
+        patient_temp = "98.6 degrees"
+        patient_weight = "150 pounds"
+        patient_bmi = "12"
+        patient_os = "normal"
+        patient_respiratory = "15 breaths per minute"
+        patient_height = "5 foot 10"
+        # session_attributes = create_patient_name_attributes(patient_name)
+        speech_output = "patient" + patient_name + "underwent a craniotomy at 7 pm on March 17th" + \
+                        "what else do you want to know about your patient" + \
+                        ". You can ask me for specific vitals by saying, for example, " + \
+                        "What is the patient's Blood pressure?"
+        reprompt_text = "You can ask me anything about the patient's specific vitals such as, for example, " + \
+                        "What is the patient's Temperature?"
+    else:
+        speech_output = "I'm not sure which patient information that is " + \
+                        "Please try again."
+        reprompt_text = "I'm not sure which patient information that is " + \
+                        "You can ask me anything about a patient such as " + \
+                        "What is my patient's BMI?"
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 
 def get_procedure_from_session(intent, session):
     session_attributes = {}
@@ -514,32 +998,72 @@ def on_intent(intent_request, session):
         return get_patient_from_session(intent, session)
     elif intent_name == "MyPatientIsIntent":
         return set_patient_in_session(intent, session)
+
+    elif intent_name == "MyPatientsRaceIntent":
+        return set_race_in_session(intent, session)
     elif intent_name == "WhatsMyPatientsRaceIntent":
         return get_race_from_session(intent, session)
+
     elif intent_name == "WhatsMyPatientsHeightIntent":
         return get_height_from_session(intent, session)
+    elif intent_name == "MyPatientsHeightIntent":
+        return set_height_from_session(intent, session)
+
     elif intent_name == "WhatsMyPatientsWeightIntent":
         return get_weight_from_session(intent, session)
+    elif intent_name == "MyPatientsWeightIntent":
+        return set_weight_from_session(intent, session)
+
     elif intent_name == "WhatsMyPatientsAgeIntent":
         return get_age_from_session(intent, session)
+    elif intent_name == "MyPatientsAgeIntent":
+        return set_age_from_session(intent, session)
+
     elif intent_name == "WhatsMyPatientsBmiIntent":
         return get_bmi_from_session(intent, session)
+    elif intent_name == "MyPatientsBmiIntent":
+        return set_bmi_from_session(intent, session)
+
     elif intent_name == "WhatsMyPatientsTempIntent":
         return get_temp_from_session(intent, session)
+    elif intent_name == "MyPatientsTempIntent":
+        return set_temp_from_session(intent, session)
+
     elif intent_name == "WhatsMyPatientsOsIntent":
         return get_os_from_session(intent, session)
+    elif intent_name == "MyPatientsOsIntent":
+        return set_os_from_session(intent, session)
+
     elif intent_name == "WhatsMyPatientsRespIntent":
         return get_resp_from_session(intent, session)
+    elif intent_name == "MyPatientsRespIntent":
+        return set_resp_from_session(intent, session)
+
     elif intent_name == "WhatsMyPatientsVitalsIntent":
         return get_vitals_from_session(intent, session)
+    elif intent_name == "MyPatientsVitalsIntent":
+        return set_vitals_from_session(intent, session)
+
     elif intent_name == "WhatsMyPatientsLabIntent":
         return get_lab_from_session(intent, session)
+    elif intent_name == "MyPatientsLabIntent":
+        return set_lab_from_session(intent, session)
+
     elif intent_name == "WhatsMyPatientsNotesIntent":
         return get_notes_from_session(intent, session)
+    elif intent_name == "MyPatientsNotesIntent":
+        return set_notes_from_session(intent, session)
+
     elif intent_name == "WhatsMyPatientsProceduresIntent":
         return get_procedures_from_session(intent, session)
+    elif intent_name == "MyPatientsProceduresIntent":
+        return set_procedures_from_session(intent, session)
+
     elif intent_name == "WhatsMyPatientsBpIntent":
         return get_bp_from_session(intent, session)
+    elif intent_name == "MyPatientsBpIntent":
+        return set_bp_from_session(intent, session)
+
     elif intent_name == "AMAZON.HelpIntent":
         return get_welcome_response()
     elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
