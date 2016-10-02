@@ -1,16 +1,59 @@
 {
   "intents": [
     {
-      "intent": "MyColorIsIntent",
+      "intent": "MyPatientIsIntent",
       "slots": [
         {
-          "name": "Color",
-          "type": "LIST_OF_COLORS"
+        "name": "Name",
+        "type": "LIST_OF_NAMES"
         }
       ]
     },
+
     {
-      "intent": "WhatsMyColorIntent"
+      "intent": "WhatsMyPatientsIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsRaceIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsHeightIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsWeightIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsAgeIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsTempIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsBmiIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsOsIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsRespIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsVitalsIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsNotesIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsProceduresIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsSummaryIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsBpIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsLabIntent"
     },
     {
       "intent": "AMAZON.HelpIntent"
