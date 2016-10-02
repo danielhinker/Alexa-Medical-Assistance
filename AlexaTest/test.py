@@ -50,16 +50,17 @@ def get_welcome_response():
 
     session_attributes = {}
     card_title = "Welcome"
-    speech_output = "I'm your medical assistant,my name is Alexa " \
-                    "Tell me what you want to know about the patient, " \
-                    "for example, you can ask me what is the blood pressure of Daniel Hinker"
+    speech_output = "I'm your medical assistant Alexa " \
+                    "Tell me whoes information do you want me to pull up, " \
+                    "you can try, I want to know about Robert"
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
     reprompt_text = "Please tell me what you want to know about the patient, " \
-                    "for example, you can ask me what is the tempearture of Robert Li"
+                    "for example, you can try I want to know about Kai"
     should_end_session = False
     return build_response(session_attributes, build_speechlet_response(
         card_title, speech_output, reprompt_text, should_end_session))
+
 
 
 def handle_session_end_request():
@@ -78,88 +79,56 @@ def create_favorite_color_attributes(favorite_color):
 def create_patient_name_attributes(patient_name):
     return{"patientName":patient_name}
 
+def create_patient_bp_attributes(patient_bp):
+    return{"patientBP":patient_bp}
 
-def set_color_in_session(intent, session):
-    """ Sets the color in the session and prepares the speech to reply to the
-    user.
-    """
+def create_patient_age_attributes(patient_age):
+    return{"patientAge":patient_age}
 
-
-
-    card_title = intent['name']
-    session_attributes = {}
-    should_end_session = False
-
-
-    if 'Color' in intent['slots']:
-        favorite_color = intent['slots']['Color']['value']
-        session_attributes = create_favorite_color_attributes(favorite_color)
-        speech_output = "I now know your favorite color is " + \
-                        favorite_color + \
-                        ". You can ask me your favorite color by saying, " \
-                        "what's my favorite color?"
-        reprompt_text = "You can ask me your favorite color by saying, " \
-                        "what's my favorite color?"
-    else:
-        speech_output = "I'm not sure what your favorite color is. " \
-                        "Please try again."
-        reprompt_text = "I'm not sure what your favorite color is. " \
-                        "You can tell me your favorite color by saying, " \
-                        "my favorite color is red."
-    return build_response(session_attributes, build_speechlet_response(
-        card_title, speech_output, reprompt_text, should_end_session))
 
 def set_name_in_session(intent, session):
     """ Sets the color in the session and prepares the speech to reply to the
     user.
     """
-
-
-
     card_title = intent['name']
     session_attributes = {}
     should_end_session = False
 
-
-    if 'Name' in intent['slots']:
-        patient_name = intent['slots']['Name']['value']
+    if 'patientName' in intent['slots']:
+        patient_name = intent['slots']['patientName']['value']
         session_attributes = create_patient_name_attributes(patient_name)
-        speech_output = "the name of the patient is " + \
-                        patient_name+ \
-                        ". You can ask me the name of the patient by saying " \
-                        "what's my patient's name"
-        reprompt_text = "You can ask me the name of the patient by saying, " \
-                        "what's my patient's name?"
+        speech_output = "so you want to know about " + \
+                        patient_name + ", what do you want to know about this patient?"
+
+        reprompt_text = "I didn't get that, whoes information do you want me to pull up"
     else:
         speech_output = "I'm not sure what your patient's name is. " \
                         "Please try again."
         reprompt_text = "I'm not sure what your patient's name is.  " \
-                        "You can tell me your patient's name by saying, " \
-                        "my patient's name is Robert."
+                        "You can try, " \
+                        "I want the information about Robert."
     return build_response(session_attributes, build_speechlet_response(
         card_title, speech_output, reprompt_text, should_end_session))
 
-
-def get_color_from_session(intent, session):
+def set_bp_in_session(intent, session):
+    """ Sets the color in the session and prepares the speech to reply to the
+    user.
+    """
+    card_title = intent['name']
     session_attributes = {}
-    reprompt_text = None
+    should_end_session = False
 
-
-    if session.get('attributes', {}) and "favoriteColor" in session.get('attributes', {}):
-        favorite_color = session['attributes']['favoriteColor']
-        speech_output = "Your favorite color is " + favorite_color + \
-                        ". Goodbye."
-        should_end_session = True
+    if 'patientBP' in intent['slots']:
+        patient_bp = intent['slots']['patientBP']['value']
+        session_attributes = create_patient_bp_attributes(patient_bp)
+        speech_output = "The blood pressure of  " + \
+                        patient_name + "is" + patient_bp
     else:
-        speech_output = "I'm not sure what your favorite color is. " \
-                        "You can say, my favorite color is red."
-        should_end_session = False
+        reprompt_text = "I didn't get that, whoes information do you want me to pull up"
 
-    # Setting reprompt_text to None signifies that we do not want to reprompt
-    # the user. If the user does not respond or says something that is not
-    # understood, the session will end.
     return build_response(session_attributes, build_speechlet_response(
-        intent['name'], speech_output, reprompt_text, should_end_session))
+        card_title, speech_output, reprompt_text, should_end_session))
+
 
 
 def get_name_from_session(intent, session):
@@ -168,8 +137,8 @@ def get_name_from_session(intent, session):
 
 
     if session.get('attributes', {}) and "patientName" in session.get('attributes', {}):
-        favorite_color = session['attributes']['patientName']
-        speech_output = "Your patient's name " + patient_name
+        patient_name = session['attributes']['patientName']
+        speech_output = "Your patient's name " + patient_name + "." + "What do you want to know about" + patient_name + "his blood pressure is " + patient_bp
 
         should_end_session = True
     else:
@@ -182,6 +151,28 @@ def get_name_from_session(intent, session):
     # understood, the session will end.
     return build_response(session_attributes, build_speechlet_response(
         intent['name'], speech_output, reprompt_text, should_end_session))
+
+def get_bp_from_session(intent, session):
+    session_attributes = {}
+    reprompt_text = None
+    if session.get('attributes', {}) and "MyPatientbp" in session.get('attributes', {}):
+
+        patient_bp = session['attributes']['patientBP']
+        speech_output = "the blood pressure of "+ patient_name + "is" + patient_bp
+
+        should_end_session = True
+    else:
+        speech_output = "I'm don't quite understand " \
+                        "You can try, what's my patient's blood pressure."
+        should_end_session = False
+
+    # Setting reprompt_text to None signifies that we do not want to reprompt
+    # the user. If the user does not respond or says something that is not
+    # understood, the session will end.
+    return build_response(session_attributes, build_speechlet_response(
+        intent['name'], speech_output, reprompt_text, should_end_session))
+
+
 
 
 
@@ -205,6 +196,7 @@ def on_launch(launch_request, session):
     return get_welcome_response()
 
 
+
 def on_intent(intent_request, session):
     """ Called when the user specifies an intent for this skill """
 
@@ -221,6 +213,12 @@ def on_intent(intent_request, session):
         return get_name_from_session(intent, session)
     elif intent_name == "MyPatient":
         return set_name_in_session(intent,session)
+
+    elif intent_name == "Howsmypatientsbp":
+        return get_bp_from_session(intent, session)
+    elif intent_name == "MyPatientbp":
+        return set_bp_in_session(intent,session)
+
     elif intent_name == "AMAZON.HelpIntent":
         return get_welcome_response()
     elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
