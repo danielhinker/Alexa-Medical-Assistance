@@ -1,0 +1,179 @@
+{
+  "intents": [
+    {
+      "intent": "MyPatientIsIntent",
+      "slots": [
+        {
+        "name": "Name",
+        "type": "LIST_OF_NAMES"
+        }
+      ]
+    },
+
+    {
+      "intent": "MyPatientsRaceIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "MyPatientsHeightIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "MyPatientsWeightIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "MyPatientsAgeIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "MyPatientsBmiIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "MyPatientsTempIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "MyPatientsOsIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "MyPatientsRespIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "MyPatientsVitalsIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "MyPatientsLabIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "MyPatientsNotesIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "MyPatientsProceduresIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "MyPatientsBpIntent",
+      "slots":[
+        {
+          "name":"Name",
+          "type":"LIST_OF_NAMES"
+
+        }]
+    },
+    {
+      "intent": "WhatsMyPatientsIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsRaceIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsHeightIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsWeightIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsAgeIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsTempIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsBmiIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsOsIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsRespIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsVitalsIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsNotesIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsProceduresIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsSummaryIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsBpIntent"
+    },
+    {
+      "intent": "WhatsMyPatientsLabIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}

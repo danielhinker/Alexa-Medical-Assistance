@@ -1,0 +1,62 @@
+WhatsMyPatientsIntent what is my patient's name
+WhatsMyPatientsIntent patient's name
+WhatsMyPatientsIntent name
+WhatsMyPatientsRaceIntent what's my patient's race
+WhatsMyPatientsRaceIntent patient's race
+WhatsMyPatientsRaceIntent race
+WhatsMyPatientsHeightIntent what's my patient's height
+WhatsMyPatientsHeightIntent patient's height
+WhatsMyPatientsHeightIntent height
+WhatsMyPatientsWeightIntent what's my patient's weight
+WhatsMyPatientsWeightIntent patient's weight'
+WhatsMyPatientsWeightIntent weight
+WhatsMyPatientsAgeIntent what's my patient's age
+WhatsMyPatientsAgeIntent patient's age
+WhatsMyPatientsAgeIntent age
+WhatsMyPatientsTempIntent what's my patient's temperature
+WhatsMyPatientsTempIntent patient's temperature
+WhatsMyPatientsTempIntent temperature
+WhatsMyPatientsBmiIntent what's patient's bmi
+WhatsMyPatientsBmiIntent patient's bmi
+WhatsMyPatientsBmiIntent bmi
+WhatsMyPatientsBpIntent what's patient's blood pressure
+WhatsMyPatientsBpIntent patient's blood pressure
+WhatsMyPatientsBpIntent blood pressure
+WhatsMyPatientsOsIntent what's patient's oxygen saturation
+WhatsMyPatientsOsIntent patient's oxygen saturation'
+WhatsMyPatientsOsIntent oxygen saturation
+WhatsMyPatientsRespIntent what's patient's respiratory rate
+WhatsMyPatientsRespIntent patient's respiratory rate
+WhatsMyPatientsRespIntent respiratory rate
+WhatsMyPatientsVitalsIntent what's patient's vitals
+WhatsMyPatientsVitalsIntent patient's vitals
+WhatsMyPatientsVitalsIntent vitals
+WhatsMyPatientsLabIntent what are the patient's lab results
+WhatsMyPatientsLabIntent patients lab results
+WhatsMyPatientsLabIntent lab results
+WhatsMyPatientsNotesIntent what are the patients bedside notes
+WhatsMyPatientsNotesIntent patients bedside notes
+WhatsMyPatientsNotesIntent bedside notes
+WhatsMyPatientsProceduresIntent what are the patients recent procedures
+WhatsMyPatientsProceduresIntent patients recent procedures
+WhatsMyPatientsProceduresIntent recent procedures
+WhatsMyPatientsSummaryIntent what is the patients summary
+WhatsMyPatientsSummaryIntent patients summary
+WhatsMyPatientsSummaryIntent summary
+
+
+
+MyPatientIsIntent my patient is {Name}
+MyPatientsRaceIntent I want to know the race of {Name}
+MyPatientsHeightIntent height of {Name}
+MyPatientsWeightIntent weight of {Name}
+MyPatientsAgeIntent age of {Name}
+MyPatientsBmiIntent Body mass index of {Name}
+MyPatientsTempIntent Temperature of {Name}
+MyPatientsOsIntent Oxygen saturation of {Name}
+MyPatientsRespIntent Respiratory rate of {Name}
+MyPatientsVitalsIntent	Vital signs of {Name}
+MyPatientsLabIntent Lab procedures of {Name}
+MyPatientsNotesIntent Bedside notes of {Name}
+MyPatientsProceduresIntent Procedures done on {Name}
+MyPatientsBpIntent Blood Pressure of {Name}
