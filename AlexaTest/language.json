@@ -14,4 +14,16 @@ WhatsMyColorIntent yes
 WhatsMyColorIntent yup
 WhatsMyColorIntent sure
 WhatsMyColorIntent yes please
+Howsmypatient what's my patient's name
+Howsmypatient patient's name
+Howsmypatient name
+Howsmypatient what's my patient's race
+Howsmypatient patient's race
+Howsmypatient race
+Howsmypatient what's my patient's height
+Howsmypatient patient's height
+Howsmypatient height
+Howsmypatient what's my patient's weight
+Howsmypatient patient's weight
 MyColorIsIntent my favorite color is {Color}
+MyPatient my patient's name is {patientName}

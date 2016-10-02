@@ -10,20 +10,20 @@
       ]
     },
     {
-      "intent":"Howsmypatient",
+      "intent":"MyPatient",
       "slots":[
         {
-          "name":"Name",
+          "name":"patientName",
           "type":"LIST_OF_NAMES"
         }
       ]
-    }
+    },
 
     {
       "intent": "WhatsMyColorIntent"
     },
     {
-      "intent":"Howsmypatient"
+      "intent": "Howsmypatient"
     },
     {
       "intent": "AMAZON.HelpIntent"

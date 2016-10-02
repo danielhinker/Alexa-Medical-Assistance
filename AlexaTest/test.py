@@ -162,7 +162,7 @@ def get_color_from_session(intent, session):
         intent['name'], speech_output, reprompt_text, should_end_session))
 
 
-def get_color_from_session(intent, session):
+def get_name_from_session(intent, session):
     session_attributes = {}
     reprompt_text = None
 
@@ -218,9 +218,9 @@ def on_intent(intent_request, session):
     if intent_name == "MyColorIsIntent":
         return set_color_in_session(intent, session)
     elif intent_name == "Howsmypatient":
-        return get_color_from_session(intent, session)
+        return get_name_from_session(intent, session)
     elif intent_name == "MyPatient":
-        return set_color_in_session(intent,session)
+        return set_name_in_session(intent,session)
     elif intent_name == "AMAZON.HelpIntent":
         return get_welcome_response()
     elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
