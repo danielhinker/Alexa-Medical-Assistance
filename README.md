@@ -1,2 +1,2 @@
-# Doctor-Alexa
-Summarize patient information
+# Doctor Alexa
+Alexa Skills App that summarizes patient information for healthcare providers.
